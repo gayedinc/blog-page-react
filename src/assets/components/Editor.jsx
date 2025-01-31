@@ -2,7 +2,7 @@ import { useEffect, useState, useRef, useContext } from "react";
 import { ThemeContext } from "../../App";
 
 export default function Editor() {
-  const theme = useContext(ThemeContext);
+  const { theme } = useContext(ThemeContext);
   const [posts, setPosts] = useState([]);
   const [editingPost, setEditingPost] = useState(null);
   const blogDialogRef = useRef(null);

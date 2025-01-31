@@ -2,7 +2,6 @@ import { useContext } from "react";
 import { PageContext } from "../../App";
 
 export default function About() {
-  const page = useContext(PageContext);
 
   return (
     <>
