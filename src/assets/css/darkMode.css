@@ -1,0 +1,73 @@
+body.dark-mode {
+  height: 100vh;
+  background-color: #090D1F;
+}
+
+body.dark-mode .hamburger-menu-content.block {
+  background-color: #090D1F;
+  color: #fff;
+}
+
+body.dark-mode .nav-hamburger ul, 
+body.dark-mode .header h1,
+body.dark-mode .page-title,
+body.dark-mode .home-content h1,
+body.dark-mode .recent-blog h3
+{
+  color: #fff;
+}
+
+body.dark-mode .about-me p,
+body.dark-mode .home-content p {
+color: #C0C5D0;
+}
+
+body.dark-mode .edit-blog-area li, 
+body.dark-mode .blogItem,
+body.dark-mode .blogItem-blog {
+  background-color: #23273c;
+}
+
+body.dark-mode .post-info p {
+  color: #C0C5D0;
+}
+
+body.dark-mode .post-info span,
+body.dark-mode .blog-info span {
+  color: #cfc0f4;
+}
+
+body.dark-mode .blog-info h3, 
+body.dark-mode .blog-info h4 {
+  color: #fff;
+}
+
+body.dark-mode .blog-info p {
+  color: #C0C5D0;
+}
+
+body.dark-mode .edit-blog-area h2 {
+  color:#fff;
+}
+
+body.dark-mode .edit-blog-area h4 {
+  color: #C0C5D0;
+}
+
+body.dark-mode .nav-adres ul {
+  color: #fff;
+}
+
+body.dark-mode dialog {
+  background-color: #090D1F;
+}
+
+body.dark-mode dialog h2 {
+  color: #fff;
+}
+
+body.dark-mode input, body.dark-mode textarea {
+  background-color: #23273c;
+  border: none;
+  color: #fff;
+}
