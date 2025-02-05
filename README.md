@@ -1,8 +1,24 @@
-# React + Vite
+# 🚀 Yeni Proje Tamamlandı: React ile Hash Router ve API Yönetimi
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bu projede React kullanarak **hash router** yapısı ile uygulamanın yönlendirmelerini yönetiyor, **useContext** hook'u ile tema yönetimi yaparak kullanıcı deneyimini kişiselleştiriyorum. 💡
 
-Currently, two official plugins are available:
+## 👀 Projede Neler Yaptım?
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Hash Router Yapısı:**  
+  React ile basit bir hash router yapısı kullanarak uygulamanın yönlendirmelerini yönettim.
+
+- **Tema Yönetimi:**  
+  **useContext** hook’u ile tema yönetimi sağlayarak kullanıcıların tercihine göre ışık ve karanlık tema arasında geçiş yapabilmesini sağladım. 🌓
+
+- **API ile Veri Yönetimi:**  
+  Verilerimi **Postman** üzerinden kendim oluşturdum ve **POST** yöntemi ile verileri aldım. Ayrıca, **PUT** yöntemiyle verileri güncelleyebildim ve **DELETE** yöntemi ile verileri silebildim. Bu süreçte API'lerle etkili bir şekilde çalışarak uygulama fonksiyonlarını geliştirdim.
+
+- **Güvenlik:**  
+  Projeme **kullanıcı adı ve şifre kontrolü** ekleyerek güvenliği sağladım. Bu sayede yalnızca giriş yapan kullanıcılar yazıları düzenleyebilir ve silebilir. 🔐
+
+- **Tasarım ve Kullanıcı Arayüzü:**  
+  Projede kullanılan tüm tasarımı ve kullanıcı arayüzünü **tamamen kendim tasarladım**. Bu sayede, görsel ve fonksiyonel açıdan özgün bir deneyim sundum. 🎨
+
+---
+
+Bu proje React ile geliştirilen modern bir uygulama yapısının temel bileşenlerini kullanarak hem işlevsel hem de güvenli bir deneyim sundu. Kullanıcıların ihtiyacına göre özelleştirilmiş bir tema ve güvenlik sistemiyle API'lerle etkili bir entegrasyon sağladım.
