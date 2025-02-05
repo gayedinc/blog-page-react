@@ -1,4 +1,4 @@
-# 🚀 Yeni Proje Tamamlandı: React ile Hash Router ve API Yönetimi
+# 🚀 Blog Page React Projesi
 
 Bu projede React kullanarak **hash router** yapısı ile uygulamanın yönlendirmelerini yönetiyor, **useContext** hook'u ile tema yönetimi yaparak kullanıcı deneyimini kişiselleştiriyorum. 💡
 
