@@ -1,4 +1,4 @@
-# 🚀 Blog Page React Projesi
+# 🚀 Blog Page Projesi
 
 Bu projede React kullanarak **hash router** yapısı ile uygulamanın yönlendirmelerini yönetiyor, **useContext** hook'u ile tema yönetimi yaparak kullanıcı deneyimini kişiselleştiriyorum. 💡
 
