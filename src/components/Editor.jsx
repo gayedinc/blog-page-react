@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef, useContext } from "react";
-import { ThemeContext } from "../../App";
+import { ThemeContext } from "../App";
 
 export default function Editor() {
   const { theme } = useContext(ThemeContext);

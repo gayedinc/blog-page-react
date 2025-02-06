@@ -1,6 +1,3 @@
-import { useContext } from "react";
-import { PageContext } from "../../App";
-
 export default function About() {
 
   return (

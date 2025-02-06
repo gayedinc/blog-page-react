@@ -1,18 +1,38 @@
 import { createContext, useEffect, useState } from "react";
-import Home from "./assets/components/Home";
-import About from "./assets/components/About";
-import BlogListItem from "./assets/components/BlogListItem";
-import Detail from "./assets/components/Detail";
-import Editor from "./assets/components/Editor";
-import NotFound from "./assets/components/NotFound";
+import Home from "./components/Home";
+import About from "./components/About";
+import BlogListItem from "./components/BlogListItem";
+import Detail from "./components/Detail";
+import Editor from "./components/Editor";
+import NotFound from "./components/NotFound";
 import "./assets/css/darkMode.css";
 
 const routes = [
-  { title: "ANASAYFA", url: "/", component: <Home /> },
-  { title: "HAKKIMDA", url: "/hakkinda", component: <About /> },
-  { title: "BLOG", url: "/blog", component: <BlogListItem /> },
-  { title: "DETAYLAR", url: "/detaylar", component: <Detail /> },
-  { title: "EDİTÖR", url: "/editor", component: <Editor /> },
+  {
+    title: "ANASAYFA",
+    url: "/",
+    component: <Home />
+  },
+  {
+    title: "HAKKIMDA",
+    url: "/hakkinda",
+    component: <About />
+  },
+  {
+    title: "BLOG",
+    url: "/blog",
+    component: <BlogListItem />
+  },
+  {
+    title: "DETAYLAR",
+    url: "/detaylar",
+    component: <Detail />
+  },
+  {
+    title: "EDİTÖR",
+    url: "/editor",
+    component: <Editor />
+  },
 ];
 
 const notFound = { component: <NotFound /> };
