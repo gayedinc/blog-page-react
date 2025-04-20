@@ -60,9 +60,13 @@ Main sections include:
 
 ![image](https://github.com/user-attachments/assets/d7906b2c-8cba-49be-be63-4cf7fd7312a1)
 
-- If the user is **not admin**, or login credentials do not match the admin credentials, any changes made to the blog posts **will not be saved**.
+- If the user is **not an admin**, or login credentials do not match the admin credentials, any changes made to the blog posts **will not be saved**.
 - Only the **admin user** has permission to add, edit, or delete blog posts.
 - All API requests are securely sent with the `Authorization: Basic` header.
+
+### 🔐 Modal Dismissal on Outside Click
+- Modals automatically close when users click outside their bounds.
+- This feature improves UX and is handled using `useRef` and the `mousedown` event listener.
 
 ## 🌐 Live Demo
 
