@@ -15,6 +15,24 @@ export default function Home() {
     getData();
   }, []);
 
+  // Yardımcı tarih formatlayıcı
+  function formatDateTime(datetimeString) {
+    const date = new Date(datetimeString);
+    const options = {
+      day: "2-digit",
+      month: "long",
+      year: "numeric",
+    };
+    const datePart = date.toLocaleDateString("tr-TR", options);
+    const timePart = date.toLocaleTimeString("tr-TR", {
+      hour: "2-digit",
+      minute: "2-digit",
+      hour12: false,
+    });
+
+    return `${datePart} - ${timePart}`;
+  }
+
   return (
     <>
       <div className="home-content">
@@ -29,7 +47,7 @@ export default function Home() {
             <div key={post.id} className="blogItem-blog" onClick={() => (window.location = "/#/detaylar")}>
               <img src={post.imageUrl} alt={post.title} />
               <div className="post-info">
-                <span>{post.created}</span>
+                <span>{formatDateTime(post.created)}</span>
                 <p>{post.title}</p>
               </div>
             </div>

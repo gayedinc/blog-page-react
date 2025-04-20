@@ -131,7 +131,7 @@ function App() {
           </div>
         </div>
         <nav className="nav-desktop">
-          <h1>Gaye Dinç</h1>
+          <h1 onClick={() => (window.location = "/")} style={{ cursor: "pointer" }}>Gaye Dinç</h1>
           <div className="nav-adres">
             <ul>
               {routes.map((route) => (
