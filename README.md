@@ -53,8 +53,8 @@ Main sections include:
 
 - The **Editor Modal** allows adding new posts or editing existing ones.
 
-![image](https://github.com/user-attachments/assets/c2aa6172-ef11-420c-b6f9-af9c1a02a9af)  
-![image](https://github.com/user-attachments/assets/85c5e3f3-0bb0-40fd-ad38-16dc204551f5)
+![image](https://github.com/user-attachments/assets/b02da383-099f-49fd-af2d-d4714405cfbe)
+![image](https://github.com/user-attachments/assets/4cd5523f-6aae-4682-82c2-fc5401c77bb6)
 
 - Posts cannot be deleted without confirmation from the user.
 
