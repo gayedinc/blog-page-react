@@ -3,12 +3,16 @@ import { ThemeContext } from "../App";
 
 export default function Editor() {
   const { theme } = useContext(ThemeContext);
+
   const [posts, setPosts] = useState([]);
   const [editingPost, setEditingPost] = useState(null);
+
   const blogDialogRef = useRef(null);
   const loginDialogRef = useRef(null);
   const deleteDialogRef = useRef(null);
+
   const [deletePostId, setDeletePostId] = useState(null);
+
   const [username, setUsername] = useState(localStorage.username || "");
   const [password, setPassword] = useState(localStorage.password || "");
   const [isLoggedIn, setIsLoggedIn] = useState(!!localStorage.username); // daha önce giriş yapıldı mı kontrolü
@@ -103,6 +107,31 @@ export default function Editor() {
     setPosts(posts.filter((x) => x.id !== deletePostId));
     deleteDialogRef.current.close();
   }
+
+  useEffect(() => {
+    function handleOutsideClick(event) {
+      // login modal
+      if (loginDialogRef.current && event.target === loginDialogRef.current) {
+        loginDialogRef.current.close();
+      }
+
+      // blog modal
+      if (blogDialogRef.current && event.target === blogDialogRef.current) {
+        blogDialogRef.current.close();
+      }
+
+      // delete modal
+      if (deleteDialogRef.current && event.target === deleteDialogRef.current) {
+        deleteDialogRef.current.close();
+      }
+    }
+
+    window.addEventListener("click", handleOutsideClick);
+
+    return () => {
+      window.removeEventListener("click", handleOutsideClick);
+    };
+  }, []);
 
   return (
     <>
