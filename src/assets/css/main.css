@@ -402,32 +402,128 @@
   z-index: -1;
 }
 
-dialog {
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+}
+
+.modal-content {
   width: 80%;
   max-width: 600px;
   background-color: #fff;
   color: #333;
-  border: none;
-  padding: 30px;
   border-radius: 12px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+  padding: 30px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   position: relative;
   z-index: 100;
-  transform: translateY(-50%);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-dialog[open] {
-  opacity: 1;
-  pointer-events: auto;
+/* Login Modal */
+.login-modal h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+.login-modal input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+.login-modal button {
+  width: 100%;
+  padding: 12px;
+  background-color: #7683bf;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Blog Modal */
+.blog-modal h2 {
+  font-size: 1.5rem;
+}
+.blog-modal input,
+.blog-modal textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+.blog-modal button {
+  padding: 12px;
+  background-color: #7683bf;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+/* Delete Modal */
+.delete-modal h2 {
+  font-size: 1.5rem;
+  color: #d32f2f;
+}
+.delete-modal .dialog-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+.deleteConfirmBtn {
+  flex: 1;
+  padding: 12px;
+  background: #d32f2f;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.closeDialogBtn {
+  flex: 1;
+  padding: 12px;
+  background: #667085;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Ortak kapatma butonu */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  font-size: 1.5rem;
+  border: none;
+  cursor: pointer;
+  color: #333;
+}
+
+.close-img {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  cursor: pointer;
+  z-index: 101;
 }
 
 input, textarea {
@@ -458,14 +554,6 @@ textarea {
   min-height: 120px;
 }
 
-dialog img {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  width: 30px;
-  cursor: pointer;
-}
-
 .add-blog-btn-area {
   display: flex;
   justify-content: space-between;
@@ -494,62 +582,6 @@ dialog img {
   transform: scale(1.05);
 }
 
-dialog::backdrop {
-  background-color: rgba(0, 0, 0, 0.6);
-  z-index: 99;
-}
-
-.login-dialog h2 {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 20px;
-  color: #333;
-}
-
-.login-dialog input {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 12px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 1rem;
-}
-
-.login-dialog button {
-  width: 100%;
-  padding: 12px;
-  border: none;
-  border-radius: 8px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  color: #fff;
-  background-color: #7683bf;
-}
-
-.delete-dialog h2 {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 20px;
-  color: #d32f2f;
-}
-
-.delete-dialog .dialog-buttons {
-  display: flex;
-  justify-content: space-between;
-  gap: 15px;
-}
-
-.delete-dialog button {
-  flex: 1;
-  padding: 12px;
-  border: none;
-  border-radius: 8px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
 .deleteConfirmBtn {
   background: linear-gradient(135deg, #f44336, #e57373);
   color: white;
@@ -557,15 +589,6 @@ dialog::backdrop {
 
 .deleteConfirmBtn:hover {
   background: linear-gradient(135deg, #d32f2f, #ef5350);
-}
-
-.closeDialogBtn {
-  background: #667085;
-  color: white;
-}
-
-.closeDialogBtn:hover {
-  background: #4e5a6e;
 }
 
 .nav-hamburger {
