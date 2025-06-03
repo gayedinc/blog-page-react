@@ -88,7 +88,7 @@ To run this project on your local machine, follow these steps:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/blog-page-react.git
+git clone https://github.com/gayedinc/blog-page-react.git
 ```
 
 If Git is not installed on your system, download it from [https://git-scm.com](https://git-scm.com).
